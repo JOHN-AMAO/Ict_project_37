@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lead City University</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="files/logo.png" alt="Lead City University Logo">
+                    <span>Lead City University</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h1>Contact Lead City University</h1>
+                    <p>We're here to help you with your inquiries. Get in touch with us through any of the methods below or fill out our contact form.</p>
+                </div>
+                
+                <div class="contact-layout">
+                    <!-- Contact Information Side -->
+                    <div class="contact-info-side">
+                        <h2>Get in Touch</h2>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h3>Visit Our Campus</h3>
+                                    <p>Lagos-Ibadan Express Way Toll Gate Area<br>
+                                    Ibadan, Oyo State, Nigeria</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <h3>Call Us</h3>
+                                    <p>Main Line: 02014143228<br>
+                                    WhatsApp: 0815 331 8702</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">✉️</div>
+                                <div class="contact-details">
+                                    <h3>Email Us</h3>
+                                    <p>General Inquiries: leadcity@lcu.edu.ng<br>
+                                    Quick Response Available</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">🕒</div>
+                                <div class="contact-details">
+                                    <h3>Office Hours</h3>
+                                    <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
+                                    Saturday: 9:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                        
+                        <div class="additional-info">
+                            <h3>Additional Information</h3>
+                            <p><strong>Response Time:</strong> We typically respond within 24-48 hours during business days.</p>
+                            <p><strong>Campus Tours:</strong> Available by appointment. Contact admissions office to schedule.</p>
+                            <p><strong>Emergency Contact:</strong> For urgent matters, call 02014143228 or WhatsApp 0815 331 8702.</p>
+                            <p><strong>Location:</strong> Easily accessible via Lagos-Ibadan Express Way, with ample parking available.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form Side -->
+                    <div class="contact-form-side">
+                        <h2>Send Us a Message</h2>
+                        
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="enquiry">Enquiry Type *</label>
+                                <select id="enquiry" name="enquiry" required>
+                                    <option value="">Select an option</option>
+                                    <option value="admission">Admission Inquiry</option>
+                                    <option value="academic">Academic Information</option>
+                                    <option value="financial">Financial Information</option>
+                                    <option value="programs">Program Details</option>
+                                    <option value="campus">Campus Visit</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Brief description of your inquiry">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                        
+                        <div id="formDisplay" class="form-display" style="display: none;">
+                            <h3>Thank You for Your Message!</h3>
+                            <p>We have received your inquiry and will respond within 24-48 hours.</p>
+                            <p>For urgent matters, please call us directly at 02014143228.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Lead City University</h3>
+                <p>Celebrating 20 years of academic excellence, innovation, and impact in Nigeria and beyond.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Lagos-Ibadan Express Way Toll Gate Area, Ibadan, Oyo State, Nigeria</p>
+                <p>📞 02014143228 | WhatsApp: 0815 331 8702</p>
+                <p>✉️ leadcity@lcu.edu.ng</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Group 37 - ICT 211 Project. All rights reserved.</p>
+            <p>Website developed by Group 37 for ICT 211 Course Project</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
