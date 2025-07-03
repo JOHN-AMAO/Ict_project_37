@@ -162,42 +162,99 @@ function initHeroSlideshow() {
         indicators.forEach(indicator => indicator.classList.remove('active'));
         slideInfos.forEach(info => info.classList.remove('active'));
         
+        // Pause all videos first
+        slides.forEach(slide => {
+            const video = slide.querySelector('video');
+            if (video) {
+                video.pause();
+            }
+        });
+        
         // Add active class to current slide
         slides[index].classList.add('active');
         indicators[index].classList.add('active');
         slideInfos[index].classList.add('active');
         
+        // Play video in active slide if it exists
+        const activeSlide = slides[index];
+        const activeVideo = activeSlide.querySelector('video');
+        const videoHint = activeSlide.querySelector('.video-play-hint');
+        
+        if (activeVideo) {
+            // Use setTimeout to ensure the slide is fully active
+            setTimeout(() => {
+                const playPromise = activeVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        // Video started playing successfully
+                        if (videoHint) {
+                            videoHint.classList.remove('show');
+                        }
+                    }).catch(error => {
+                        console.log('Video autoplay prevented:', error);
+                        // Show hint on mobile when autoplay fails
+                        if (videoHint && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                            videoHint.classList.add('show');
+                        }
+                    });
+                }
+            }, 100);
+        }
+        
         currentSlide = index;
     }
     
-    // Pause video when not active
+    // Initialize video handling
     slides.forEach((slide, index) => {
         const video = slide.querySelector('video');
         if (video) {
-            if (index === 0) {
-                // First slide is active, pause video initially
-                video.pause();
-            }
+            // Set video properties for better mobile support
+            video.muted = true;
+            video.playsInline = true;
+            video.loop = true;
             
-            // Add event listeners to play/pause video based on slide visibility
-            slide.addEventListener('transitionend', () => {
-                if (slide.classList.contains('active')) {
-                    video.play();
-                } else {
-                    video.pause();
-                }
+            // Pause all videos initially
+            video.pause();
+            
+            // Add loading event listener
+            video.addEventListener('loadedmetadata', () => {
+                video.currentTime = 0;
+            });
+            
+            // Handle video errors
+            video.addEventListener('error', (e) => {
+                console.log('Video error:', e);
             });
         }
     });
     
-    // Start the first video if it exists and is active
-    setTimeout(() => {
-        const firstSlide = slides[0];
-        const firstVideo = firstSlide.querySelector('video');
-        if (firstVideo && firstSlide.classList.contains('active')) {
-            firstVideo.play();
-        }
-    }, 1000);
+    // Handle first slide video - need user interaction on mobile
+    const firstSlide = slides[0];
+    const firstVideo = firstSlide.querySelector('video');
+    
+    // Add click handler to enable video playback on mobile
+    document.addEventListener('click', function enableVideoPlayback() {
+        slides.forEach(slide => {
+            const video = slide.querySelector('video');
+            const videoHint = slide.querySelector('.video-play-hint');
+            
+            if (video && slide.classList.contains('active')) {
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        // Video started playing successfully
+                        if (videoHint) {
+                            videoHint.classList.remove('show');
+                        }
+                    }).catch(error => {
+                        console.log('Video autoplay prevented:', error);
+                    });
+                }
+            }
+        });
+        // Remove this listener after first click
+        document.removeEventListener('click', enableVideoPlayback);
+    }, { once: true });
 }
 
 // Form Submission Handler
