@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 37 Team - Lead City University</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 100px; /* Add space for navbar */
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #1565c0, #1976d2);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .team-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .team-table th,
+        .team-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .team-table th {
+            background: #1565c0;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .team-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .team-table td:first-child {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .team-table td:last-child {
+            font-family: 'Courier New', monospace;
+            color: #666;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #1976d2;
+        }
+
+        .project-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .project-info h2 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+
+        .leader-badge {
+            background: #1565c0;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(21, 101, 192, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .team-table {
+                font-size: 0.9rem;
+            }
+            
+            .team-table th,
+            .team-table td {
+                padding: 0.5rem;
+            }
+            
+            .team-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="files/logo.png" alt="Lead City University Logo">
+                    <span>Lead City University</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html" class="active">(team)</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="team-container">
+            <div class="team-header">
+                <h1>Group 37 Team</h1>
+                <p>ICT 211 Course Project - Lead City University Website</p>
+            </div>
+
+            <div class="project-info">
+                <h2>Project Information</h2>
+                <p><strong>Course:</strong> ICT 211</p>
+                <p><strong>Project:</strong> Lead City University Website Development</p>
+                <p><strong>Group:</strong> Group 37</p>
+                <p><strong>Academic Year:</strong> 2024/2025</p>
+            </div>
+
+            <table class="team-table">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Student Name</th>
+                        <th>Matric Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Olayemi Oluwatomilola Jeremiah <span class="leader-badge">Group Leader</span></td>
+                        <td>LCU/UG/24/33724</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Amao John Ayomide</td>
+                        <td>LCU/UG/24/30891</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ojelade Luqmon Timileyin</td>
+                        <td>LCU/UG/24/34363</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Olayinka Ebenezer Enioto</td>
+                        <td>LCU/UG/24/28761</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Mb-Idodo Armstrong Eshemokha</td>
+                        <td>0218568</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Ezenwa-Christopher Buchi</td>
+                        <td>LCU/UG/23/27353</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Lead City University</h3>
+                <p>Celebrating 20 years of academic excellence, innovation, and impact in Nigeria and beyond.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Lagos-Ibadan Express Way Toll Gate Area, Ibadan, Oyo State, Nigeria</p>
+                <p>📞 02014143228 | WhatsApp: 0815 331 8702</p>
+                <p>✉️ leadcity@lcu.edu.ng</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 <a href="team.html" style="text-decoration: underline;">Group 37</a> - ICT 211 Project. All rights reserved.</p>
+            <p>Website developed by <a href="team.html" style="text-decoration: underline;">Group 37</a> for ICT 211 Course Project</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
