@@ -1034,6 +1034,16 @@ body {
     justify-content: center;
     font-size: 1.5rem;
     flex-shrink: 0;
+    overflow: hidden;
+    border: 3px solid #64b5f6;
+    box-shadow: 0 4px 12px rgba(21, 101, 192, 0.3);
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .author-details h4 {
